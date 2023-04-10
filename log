@@ -365,3 +365,15 @@ Mon 10 Apr 2023 11:22:17 PM UTC:
  tests:  8|3
 total_score: 40/70
 5fadccd
+Mon 10 Apr 2023 11:31:13 PM UTC: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:87:14: error: implicit declaration of function ‘has’; did you mean ‘hash’? [-Werror=implicit-function-declaration]
+   87 |   long pos = has(key, map->capacity);
+      |              ^~~
+      |              hash
+cc1: all warnings being treated as errors
+Compilation failed
+098e09a
