@@ -253,3 +253,13 @@ hashmap.c:92:8: error: unused variable ‘pos’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0eea919
+Mon 10 Apr 2023 11:18:14 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:40: error: invalid type argument of ‘->’ (have ‘long int’)
+   94 |   if(is_equal(key, *(map->capacity+pos)->key)){
+      |                                        ^~
+Compilation failed
+4881e98
