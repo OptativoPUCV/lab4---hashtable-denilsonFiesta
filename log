@@ -1,0 +1,20 @@
+Mon 10 Apr 2023 09:16:28 PM UTC: 
+ hashmap.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:22: error: expected expression before ‘HashMap’
+   56 |   HashMap* nuevo = (*HashMap) calloc(1, sizeof(HashMap));
+      |                      ^~~~~~~
+hashmap.c:56:31: error: expected ‘,’ or ‘;’ before ‘calloc’
+   56 |   HashMap* nuevo = (*HashMap) calloc(1, sizeof(HashMap));
+      |                               ^~~~~~
+hashmap.c:58:23: error: expected expression before ‘Pair’
+   58 |   nuevo->buckets = (**Pair) calloc(capacity, sizeof(HashMap));
+      |                       ^~~~
+hashmap.c:58:28: error: expected ‘;’ before ‘calloc’
+   58 |   nuevo->buckets = (**Pair) calloc(capacity, sizeof(HashMap));
+      |                            ^~~~~~~
+      |                            ;
+Compilation failed
+c5ab2f6
