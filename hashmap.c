@@ -69,18 +69,18 @@ void enlarge(HashMap * map) {
 
   Pair** oldB = map->buckets; 
   long nsize =  map->capacity * 2;
-  free(map);
 
-  map = createMap(nsize);
+  HashMap nmap =  createMap(nsize);
 
   
   for(long it = 0; it < nsize/2; it++){
+    
     if(*(oldB+it) == NULL) continue;
-
-    insertMap(map, (*(oldB+it))->key, (*(oldB+it))->value );
+    insertMap(nmap, (*(oldB+it))->key, (*(oldB+it))->value );
     
   }
-  
+
+  map = nmpa;
   
   
 }
