@@ -80,7 +80,7 @@ void enlarge(HashMap * map) {
     
   }
 
-  map = nmpa;
+  map = nmap;
   
   
 }

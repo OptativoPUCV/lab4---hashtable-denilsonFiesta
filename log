@@ -498,3 +498,24 @@ hashmap.c:83:9: error: ‘nmpa’ undeclared (first use in this function); did y
 hashmap.c:83:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 12beed0
+Mon 10 Apr 2023 11:56:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:73:19: error: invalid initializer
+   73 |   HashMap nmap =  createMap(nsize);
+      |                   ^~~~~~~~~
+hashmap.c:79:15: error: incompatible type for argument 1 of ‘insertMap’
+   79 |     insertMap(nmap, (*(oldB+it))->key, (*(oldB+it))->value );
+      |               ^~~~
+      |               |
+      |               HashMap {aka struct HashMap}
+hashmap.c:42:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘HashMap’ {aka ‘struct HashMap’}
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                ~~~~~~~~~~^~~
+hashmap.c:83:9: error: incompatible types when assigning to type ‘HashMap *’ {aka ‘struct HashMap *’} from type ‘HashMap’ {aka ‘struct HashMap’}
+   83 |   map = nmap;
+      |         ^~~~
+Compilation failed
+30aa234
