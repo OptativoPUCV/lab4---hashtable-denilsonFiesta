@@ -135,12 +135,14 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
 
-  for(long it = 0; it < map->capcity; it++){
+  for(long it = 0; it < map->capacity; it++){
 
     if(*(map->buckets+it) ==  NULL) continue;
 
-    if( (*(map->buckets+it))->key != NULL ) return *(map->buckets+it);
-    
+    if( (*(map->buckets+it))->key != NULL ){
+      map->current = it;
+      return *(map->buckets+it);
+    }
   }
   return NULL;
 }

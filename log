@@ -446,3 +446,9 @@ hashmap.c:138:30: error: ‘HashMap’ {aka ‘struct HashMap’} has no member 
       |                              capacity
 Compilation failed
 d6c9d9d
+Mon 10 Apr 2023 11:40:03 PM UTC: 
+ hashmap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ tests:  13|2
+total_score: 50/70
+76cc446
