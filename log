@@ -126,3 +126,13 @@ hashmap.c:52:30: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos
       |                              ->
 Compilation failed
 b0165de
+Mon 10 Apr 2023 09:36:55 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:28: error: invalid type argument of ‘->’ (have ‘long int’)
+   52 |     if( map->buckets+newPos->key == NULL){
+      |                            ^~
+Compilation failed
+26e3e23
