@@ -359,3 +359,9 @@ hashmap.c:99:26: error: ‘newPos’ undeclared (first use in this function)
 hashmap.c:99:26: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 01efc7e
+Mon 10 Apr 2023 11:22:17 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|3
+total_score: 40/70
+5fadccd
