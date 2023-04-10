@@ -45,13 +45,13 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   if( (map->buckets+newPos) == NULL){
 
-    map->bukets+newPos = createPair(key, value);
+    map->buckets+newPos = createPair(key, value);
     
   }else{
 
       for(long it = newPos+1; it < map->capacity; it++){
-        if(map->bukets+it ==  NULL){
-          map->bukets+it = createPair(key, value);
+        if(map->buckets+it ==  NULL){
+          map->buckets+it = createPair(key, value);
           return;
         }
       }
