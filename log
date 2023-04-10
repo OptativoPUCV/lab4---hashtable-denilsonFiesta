@@ -383,3 +383,33 @@ Mon 10 Apr 2023 11:31:20 PM UTC:
  tests:  8|3
 total_score: 40/70
 efb60eb
+Mon 10 Apr 2023 11:32:56 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:91:5: error: statement with no effect [-Werror=unused-value]
+   91 |     *(map->buckets+pos))->key = NULL;
+      |     ^~~~~~~~~~~~~~~~~~~
+hashmap.c:91:24: error: expected ‘;’ before ‘)’ token
+   91 |     *(map->buckets+pos))->key = NULL;
+      |                        ^
+      |                        ;
+hashmap.c:91:24: error: expected statement before ‘)’ token
+hashmap.c:91:25: error: expected expression before ‘->’ token
+   91 |     *(map->buckets+pos))->key = NULL;
+      |                         ^~
+hashmap.c:98:9: error: statement with no effect [-Werror=unused-value]
+   98 |         *(map->buckets+it))->key = NULL;
+      |         ^~~~~~~~~~~~~~~~~~
+hashmap.c:98:27: error: expected ‘;’ before ‘)’ token
+   98 |         *(map->buckets+it))->key = NULL;
+      |                           ^
+      |                           ;
+hashmap.c:98:27: error: expected statement before ‘)’ token
+hashmap.c:98:28: error: expected expression before ‘->’ token
+   98 |         *(map->buckets+it))->key = NULL;
+      |                            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+94506d5
