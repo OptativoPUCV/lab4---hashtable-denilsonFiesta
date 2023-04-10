@@ -208,3 +208,14 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 93a80d2
+Mon 10 Apr 2023 11:12:43 PM UTC: 
+ hashmap.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:54:15: error: ‘capacity’ undeclared (first use in this function)
+   54 |       it = it%capacity;
+      |               ^~~~~~~~
+hashmap.c:54:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d3cdca3
