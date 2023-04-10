@@ -94,6 +94,18 @@ Pair * searchMap(HashMap * map,  char * key) {
   if(is_equal(key, (*(map->buckets+pos))->key)){
     map->current =  pos;
     return *(map->buckets+pos);
+  }else{
+
+    for(long i = 0, it = newPos+1; i < map->capacity; i++, it++){
+      it = it%map->capacity;
+      if(*(map->buckets+it) ==  NULL){
+        return NULL;
+      }else if(is_equal(key, (*(map->buckets+it))->key)){
+        map->current = it;
+        return *(map->buckets+it);
+      }
+    }
+    
   }
 
 

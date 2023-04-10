@@ -348,3 +348,14 @@ Mon 10 Apr 2023 11:20:19 PM UTC:
  tests:  6|4
 total_score: 30/70
 8c9acb9
+Mon 10 Apr 2023 11:22:06 PM UTC: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:99:26: error: ‘newPos’ undeclared (first use in this function)
+   99 |     for(long i = 0, it = newPos+1; i < map->capacity; i++, it++){
+      |                          ^~~~~~
+hashmap.c:99:26: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+01efc7e
