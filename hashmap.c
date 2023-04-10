@@ -43,7 +43,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   long newPos = hash(key, map->capacity);
 
-  if( (map->buckets+newPos) == NULL){
+  if( *(map->buckets+newPos) == NULL){
 
     *(map->buckets+newPos) = createPair(key, value);
     

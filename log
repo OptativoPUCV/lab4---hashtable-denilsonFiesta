@@ -80,3 +80,9 @@ Mon 10 Apr 2023 09:30:44 PM UTC:
  tests:  1|5
 total_score: 10/70
 c163526
+Mon 10 Apr 2023 09:31:33 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 20/70
+c61f88f
