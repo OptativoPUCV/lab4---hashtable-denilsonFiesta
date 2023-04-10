@@ -290,3 +290,23 @@ hashmap.c:95:26: error: returning ‘long int’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 3673f13
+Mon 10 Apr 2023 11:19:10 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:39: error: ‘*(map->buckets + (sizetype)((long unsigned int)pos * 8))’ is a pointer; did you mean to use ‘->’?
+   94 |   if(is_equal(key, *(map->buckets+pos)->key)){
+      |                                       ^~
+      |                                       ->
+hashmap.c:95:24: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   95 |     return map->buckets+pos);
+      |            ~~~~~~~~~~~~^~~~
+hashmap.c:95:28: error: expected ‘;’ before ‘)’ token
+   95 |     return map->buckets+pos);
+      |                            ^
+      |                            ;
+hashmap.c:95:28: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+397839d

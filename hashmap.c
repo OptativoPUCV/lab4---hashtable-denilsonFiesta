@@ -91,8 +91,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 
   long pos = hash(key, map->capacity);
 
-  if(is_equal(key, *(map->capacity+pos)->key)){
-    return (map->capacity+pos);
+  if(is_equal(key, *(map->buckets+pos)->key)){
+    return map->buckets+pos);
   }
 
 
