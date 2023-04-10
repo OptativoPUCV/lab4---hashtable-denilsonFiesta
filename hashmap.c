@@ -92,6 +92,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   long pos = hash(key, map->capacity);
 
   if(is_equal(key, (*(map->buckets+pos))->key)){
+    map->current =  pos;
     return *(map->buckets+pos);
   }
 
