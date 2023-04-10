@@ -310,3 +310,18 @@ hashmap.c:95:28: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 397839d
+Mon 10 Apr 2023 11:19:14 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:39: error: ‘*(map->buckets + (sizetype)((long unsigned int)pos * 8))’ is a pointer; did you mean to use ‘->’?
+   94 |   if(is_equal(key, *(map->buckets+pos)->key)){
+      |                                       ^~
+      |                                       ->
+hashmap.c:95:24: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   95 |     return map->buckets+pos;
+      |            ~~~~~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+20af4e7
