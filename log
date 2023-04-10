@@ -147,3 +147,18 @@ hashmap.c:52:31: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos
       |                               ->
 Compilation failed
 8536272
+Mon 10 Apr 2023 09:38:27 PM UTC: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:31: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos * 8))’ is a pointer; did you mean to use ‘->’?
+   52 |     if( *(map->buckets+newPos)->key == NULL){
+      |                               ^~
+      |                               ->
+hashmap.c:60:38: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos * 8))’ is a pointer; did you mean to use ‘->’?
+   60 |       }else if(*(map->buckets+newPos)->key == NULL){
+      |                                      ^~
+      |                                      ->
+Compilation failed
+e89fa1f
