@@ -377,3 +377,9 @@ hashmap.c:87:14: error: implicit declaration of function ‘has’; did you mean
 cc1: all warnings being treated as errors
 Compilation failed
 098e09a
+Mon 10 Apr 2023 11:31:20 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|3
+total_score: 40/70
+efb60eb
