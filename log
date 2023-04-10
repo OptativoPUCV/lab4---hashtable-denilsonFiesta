@@ -276,3 +276,17 @@ hashmap.c:95:12: error: invalid type argument of unary ‘*’ (have ‘long int
       |            ^~~~~~~~~~~~~~~~~~~~
 Compilation failed
 7263eba
+Mon 10 Apr 2023 11:18:46 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:40: error: invalid type argument of ‘->’ (have ‘long int’)
+   94 |   if(is_equal(key, *(map->capacity+pos)->key)){
+      |                                        ^~
+hashmap.c:95:26: error: returning ‘long int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   95 |     return (map->capacity+pos);
+      |            ~~~~~~~~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3673f13
