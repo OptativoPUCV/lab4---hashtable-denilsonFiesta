@@ -413,3 +413,9 @@ hashmap.c:98:28: error: expected expression before ‘->’ token
 cc1: all warnings being treated as errors
 Compilation failed
 94506d5
+Mon 10 Apr 2023 11:33:12 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  8|3
+total_score: 40/70
+6a2da64
