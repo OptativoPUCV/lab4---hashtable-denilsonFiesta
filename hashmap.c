@@ -101,6 +101,8 @@ void eraseMap(HashMap * map,  char * key) {
     
   }
 
+  map->size--;
+
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
