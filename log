@@ -64,3 +64,13 @@ hashmap.c:60:3: error: ‘size’ undeclared (first use in this function)
 hashmap.c:60:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a811e99
+Mon 10 Apr 2023 09:30:35 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:54:27: error: lvalue required as left operand of assignment
+   54 |           map->buckets+it = createPair(key, value);
+      |                           ^
+Compilation failed
+308d3ee
