@@ -519,3 +519,9 @@ hashmap.c:83:9: error: incompatible types when assigning to type ‘HashMap *’
       |         ^~~~
 Compilation failed
 30aa234
+Mon 10 Apr 2023 11:56:52 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|1
+total_score: 60/70
+fa1be89

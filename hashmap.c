@@ -70,7 +70,7 @@ void enlarge(HashMap * map) {
   Pair** oldB = map->buckets; 
   long nsize =  map->capacity * 2;
 
-  HashMap nmap =  createMap(nsize);
+  HashMap* nmap =  createMap(nsize);
 
   
   for(long it = 0; it < nsize/2; it++){
