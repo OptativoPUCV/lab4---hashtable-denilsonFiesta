@@ -92,3 +92,14 @@ Mon 10 Apr 2023 09:31:57 PM UTC:
  tests:  4|5
 total_score: 20/70
 dbea8c1
+Mon 10 Apr 2023 09:34:32 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:30: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos * 8))’ is a pointer; did you mean to use ‘->’?
+   52 |     if(*(map->buckets+newPos)->key == NULL){
+      |                              ^~
+      |                              ->
+Compilation failed
+df6d8f0
