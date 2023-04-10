@@ -336,3 +336,9 @@ hashmap.c:94:39: error: ‘*(map->buckets + (sizetype)((long unsigned int)pos * 
       |                                       ->
 Compilation failed
 92a5214
+Mon 10 Apr 2023 11:19:39 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+7c32f1b
