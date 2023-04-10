@@ -18,3 +18,9 @@ hashmap.c:58:28: error: expected ‘;’ before ‘calloc’
       |                            ;
 Compilation failed
 c5ab2f6
+Mon 10 Apr 2023 09:17:08 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/70
+2919c80
