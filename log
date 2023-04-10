@@ -24,3 +24,26 @@ Mon 10 Apr 2023 09:17:08 PM UTC:
  tests:  1|5
 total_score: 10/70
 2919c80
+Mon 10 Apr 2023 09:28:56 PM UTC: 
+ hashmap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:10: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bukets’; did you mean ‘buckets’?
+   48 |     map->bukets+newPos = createPair(key, value);
+      |          ^~~~~~
+      |          buckets
+hashmap.c:53:17: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bukets’; did you mean ‘buckets’?
+   53 |         if(map->bukets+it ==  NULL){
+      |                 ^~~~~~
+      |                 buckets
+hashmap.c:54:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bukets’; did you mean ‘buckets’?
+   54 |           map->bukets+it = createPair(key, value);
+      |                ^~~~~~
+      |                buckets
+hashmap.c:60:3: error: ‘size’ undeclared (first use in this function)
+   60 |   size++;
+      |   ^~~~
+hashmap.c:60:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d35c176
