@@ -225,3 +225,17 @@ Mon 10 Apr 2023 11:12:52 PM UTC:
  tests:  5|4
 total_score: 30/70
 bab571f
+Mon 10 Apr 2023 11:17:47 PM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:33: error: invalid type argument of ‘->’ (have ‘long int’)
+   94 |   if(is_equal(key, map->capacity->key)){
+      |                                 ^~
+hashmap.c:92:8: error: unused variable ‘pos’ [-Werror=unused-variable]
+   92 |   long pos = hash(key, map->capacity);
+      |        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+9958071
