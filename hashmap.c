@@ -101,7 +101,7 @@ void eraseMap(HashMap * map,  char * key) {
     
   }
 
-  map->size--;
+  if(map->size > 0) map->size--;
 
 }
 
