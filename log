@@ -115,3 +115,14 @@ hashmap.c:52:23: error: ‘newPoskey’ undeclared (first use in this function);
 hashmap.c:52:23: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d3f1d06
+Mon 10 Apr 2023 09:36:47 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:30: error: ‘*(map->buckets + (sizetype)((long unsigned int)newPos * 8))’ is a pointer; did you mean to use ‘->’?
+   52 |     if( (map->buckets+newPos)->key == NULL){
+      |                              ^~
+      |                              ->
+Compilation failed
+b0165de
