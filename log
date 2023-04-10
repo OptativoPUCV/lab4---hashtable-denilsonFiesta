@@ -435,3 +435,14 @@ Mon 10 Apr 2023 11:34:48 PM UTC:
  tests:  11|2
 total_score: 50/70
 4e58105
+Mon 10 Apr 2023 11:39:37 PM UTC: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:138:30: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capcity’; did you mean ‘capacity’?
+  138 |   for(long it = 0; it < map->capcity; it++){
+      |                              ^~~~~~~
+      |                              capacity
+Compilation failed
+d6c9d9d
