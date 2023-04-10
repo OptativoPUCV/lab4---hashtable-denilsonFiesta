@@ -48,16 +48,9 @@ void insertMap(HashMap * map, char * key, void * value) {
     *(map->buckets+newPos) = createPair(key, value);
     
   }else{
-
-    if( *(map->buckets+newPos)->key == NULL){
-      *(map->buckets+newPos) = createPair(key, value);
-    }
     
     for(long it = newPos+1; it < map->capacity; it++){
       if(*(map->buckets+it) ==  NULL){
-        *(map->buckets+it) = createPair(key, value);
-        break;
-      }else if(*(map->buckets+newPos)->key == NULL){
         *(map->buckets+it) = createPair(key, value);
         break;
       }
