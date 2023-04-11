@@ -542,3 +542,15 @@ Tue 11 Apr 2023 12:02:06 AM UTC:
  tests:  16|1
 total_score: 60/70
 f676f38
+Tue 11 Apr 2023 12:19:08 AM UTC: 
+ hashmap.c | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:73:56: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   73 |   map->buckets = (Pair**) calloc(map->capacity, sizeof(pair));
+      |                                                        ^~~~
+      |                                                        Pair
+hashmap.c:73:56: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+07becbc

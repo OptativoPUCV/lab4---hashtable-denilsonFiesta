@@ -67,21 +67,21 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
 
-  //Pair** oldB = map->buckets; 
-  long nsize =  map->capacity * 2;
+  map->capacity*=2;
+  Pair** oldB = map->buckets; 
 
-  HashMap* nmap =  createMap(nsize);
+  map->buckets = (Pair**) calloc(map->capacity, sizeof(pair));
 
-  
-  for(long it = 0; it < nsize/2; it++){
-    
-    if(*(map->buckets+it) == NULL) continue;
-    insertMap(nmap, (*(map->buckets+it))->key, (*(map->buckets+it))->value );
+  map->size = 0;
+
+  for(long it = 0; it < map->capacity/2; it++){
+
+    if(*(oldB+it) ==  NULL) continue;
+
+    insertMap(map, (*(oldB+it))->key, (*(oldB+it))->value );
     
   }
-
-  map = nmap;
-  
+    
   
 }
 
@@ -90,7 +90,7 @@ HashMap * createMap(long capacity) {
 
   HashMap* nuevo = (HashMap*) calloc(1, sizeof(HashMap));
 
-  nuevo->buckets = (Pair**) calloc(capacity, sizeof(HashMap));
+  nuevo->buckets = (Pair**) calloc(capacity, sizeof(Pair));
 
   nuevo->current = -1;
   nuevo->size = 0;
