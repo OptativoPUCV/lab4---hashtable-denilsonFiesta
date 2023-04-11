@@ -525,3 +525,14 @@ Mon 10 Apr 2023 11:56:52 PM UTC:
  tests:  16|1
 total_score: 60/70
 fa1be89
+Tue 11 Apr 2023 12:01:52 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:10: error: unused variable ‘oldB’ [-Werror=unused-variable]
+   70 |   Pair** oldB = map->buckets;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d5fd777

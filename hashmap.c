@@ -75,8 +75,8 @@ void enlarge(HashMap * map) {
   
   for(long it = 0; it < nsize/2; it++){
     
-    if(*(oldB+it) == NULL) continue;
-    insertMap(nmap, (*(oldB+it))->key, (*(oldB+it))->value );
+    if(*(map->buckets+it) == NULL) continue;
+    insertMap(nmap, (*(map->buckets+it))->key, (*(map->buckets+it))->value );
     
   }
 
