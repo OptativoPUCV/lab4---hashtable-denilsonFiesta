@@ -554,3 +554,9 @@ hashmap.c:73:56: error: ‘pair’ undeclared (first use in this function); did 
 hashmap.c:73:56: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 07becbc
+Tue 11 Apr 2023 12:19:17 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+fa2c138
