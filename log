@@ -597,3 +597,14 @@ hashmap.c:135:24: error: returning ‘Pair **’ from a function with incompatib
 cc1: all warnings being treated as errors
 Compilation failed
 01746ba
+Mon 24 Apr 2023 11:24:49 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:135:24: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  135 |     return map->buckets+pos;
+      |            ~~~~~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5becb3a
