@@ -564,3 +564,21 @@ Mon 24 Apr 2023 11:21:20 PM UTC:
  tests:  17|0
 total_score: 70/70
 e361c00
+Mon 24 Apr 2023 11:23:50 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:133:43: error: expected ‘)’ before ‘{’ token
+  133 |   if(is_equal(map->buckets[pos]->key, key){
+      |     ~                                     ^
+      |                                           )
+hashmap.c:152:1: error: expected expression before ‘}’ token
+  152 | }
+      | ^
+hashmap.c:152:1: error: control reaches end of non-void function [-Werror=return-type]
+  152 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+00801dd
