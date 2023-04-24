@@ -582,3 +582,18 @@ hashmap.c:152:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 00801dd
+Mon 24 Apr 2023 11:24:30 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:133:35: error: ‘*(map->buckets + (sizetype)((long unsigned int)pos * 8))’ is a pointer; did you mean to use ‘->’?
+  133 |   if(is_equal((map->buckets + pos)->key, key)){
+      |                                   ^~
+      |                                   ->
+hashmap.c:135:24: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  135 |     return map->buckets+pos;
+      |            ~~~~~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+01746ba
