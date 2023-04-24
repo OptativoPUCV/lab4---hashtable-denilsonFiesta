@@ -608,3 +608,9 @@ hashmap.c:135:24: error: returning ‘Pair **’ from a function with incompatib
 cc1: all warnings being treated as errors
 Compilation failed
 5becb3a
+Mon 24 Apr 2023 11:25:00 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+2cc37b9

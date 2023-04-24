@@ -132,7 +132,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
   if(is_equal(map->buckets[pos]->key, key)){
     map->current =  pos;
-    return map->buckets+pos;
+    return map->buckets[pos];
   }else{
 
     for(long i = 0, it = pos+1; i < map->capacity; i++, it++){
