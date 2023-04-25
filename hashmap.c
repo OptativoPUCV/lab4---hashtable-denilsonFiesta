@@ -130,7 +130,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
   long pos = hash(key, map->capacity);
 
-  if(is_equal(*(map->buckets+pos)->key, key)){
+  if(is_equal((*(map->buckets+pos))->key, key)){
     map->current =  pos;
     return *(map->buckets+pos);
   }else{
@@ -139,7 +139,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       it = it%map->capacity;
       if( *(map->buckets+it) ==  NULL){
         return NULL;
-      }else if(is_equal(key, *(map->buckets+it)->key)){
+      }else if(is_equal(key, (*(map->buckets+it))->key)){
         map->current = it;
         return *(map->buckets+it);
       }
