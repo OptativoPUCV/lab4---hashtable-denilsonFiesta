@@ -129,10 +129,6 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
 
   long pos = hash(key, map->capacity);
-
-  
-  if(is_equal((*(map->buckets+pos))->key, key));
-  printf("it was here?\n");
     
   if(is_equal((*(map->buckets+pos))->key, key)){
     map->current =  pos;
