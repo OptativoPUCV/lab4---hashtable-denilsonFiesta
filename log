@@ -620,3 +620,18 @@ Mon 24 Apr 2023 11:25:38 PM UTC:
  tests:  17|0
 total_score: 70/70
 80ef33b
+Tue 25 Apr 2023 08:34:09 PM UTC: 
+ hashmap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:133:34: error: ‘*(map->buckets + (sizetype)((long unsigned int)pos * 8))’ is a pointer; did you mean to use ‘->’?
+  133 |   if(is_equal(*(map->buckets+pos)->key, key)){
+      |                                  ^~
+      |                                  ->
+hashmap.c:142:48: error: ‘*(map->buckets + (sizetype)((long unsigned int)it * 8))’ is a pointer; did you mean to use ‘->’?
+  142 |       }else if(is_equal(key, *(map->buckets+it)->key)){
+      |                                                ^~
+      |                                                ->
+Compilation failed
+253c3c6
